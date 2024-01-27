@@ -286,7 +286,7 @@ body {
   font-family: 'Rubik', sans-serif;
   border-right: 2px solid;
   position: fixed;
-  .audio-button {
+  #audio-button {
   position: absolute;
   top: 38%; /* adjust this value as needed */
   left: 50%; /* adjust this value as needed */
