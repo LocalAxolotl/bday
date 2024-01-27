@@ -62,37 +62,37 @@ window.onload = function() {
       );
       confettiShower.push(animated);
     }
+    // Reset the audio button
+    document.getElementById('audio-button').style.display = 'block';
   }
 
   const audioElement = document.getElementById('myAudio');
-document.getElementById('audio-button').addEventListener('click', function () {
-  // Play the audio
-  var audio = document.getElementById('myAudio');
-  audio.play();
-});
-document.getElementById('confetti-button').addEventListener('click', function () {
-  console.log('test');
-  animateConfetti();
-  document.querySelector('.candle').style.display = 'none';
-  document.querySelector('.cherry').style.display = 'block';
-  document.querySelector('.hbd').style.display = 'block';
-  document.querySelector('.clue2').style.display = 'none';
-  document.querySelector('.cherry').classList.add('fall');
-  document.querySelector('.hbd').classList.add('text-animation');
+  document.getElementById('audio-button').addEventListener('click', function () {
+    // Play the audio
+    var audio = document.getElementById('myAudio');
+    audio.play();
+  });
+  document.getElementById('confetti-button').addEventListener('click', function () {
+    console.log('test');
+    animateConfetti();
+    document.querySelector('.candle').style.display = 'none';
+    document.querySelector('.cherry').style.display = 'block';
+    document.querySelector('.hbd').style.display = 'block';
+    document.querySelector('.clue2').style.display = 'none';
+    document.querySelector('.cherry').classList.add('fall');
+    document.querySelector('.hbd').classList.add('text-animation');
     document.getElementById('confetti-button').style.display = 'none';
-  document.getElementById('audio-button').style.display = 'block';
-// Play the audio
+    document.getElementById('audio-button').style.display = 'block';
+    // Play the audio
     if (audioElement.paused) {
       audioElement.play();
     } else {
       audioElement.currentTime = 0;
     }
-  // Change the text
-  document.getElementById('text').textContent = 'Press on the cherry';
-});
-  
+    // Change the text
+    document.getElementById('text').textContent = 'Press on the cherry';
+  });
 }
-
 
 
 
