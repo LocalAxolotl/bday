@@ -62,19 +62,17 @@ function animateConfetti() {
     confettiShower.push(animated);
   }
 }
-$('.cake-overlay').click(function () {
-  $('body').css({ 'background-color': '#000' });
-  $('.clue2').addClass('text-animation');
-  $('.cake-overlay').hide();
+
+document.querySelectorAll('.flame').forEach(flame => {
+  flame.addEventListener('click', function () {
+    console.log('test');
+    animateConfetti();
+    document.querySelector('.candle').style.display = 'none';
+    document.querySelector('.cherry').style.display = 'block';
+    document.querySelector('.hbd').style.display = 'block';
+    document.querySelector('.clue2').style.display = 'none';
+    document.querySelector('.cherry').classList.add('fall');
+    document.querySelector('.hbd').classList.add('text-animation');
+  });
 });
 
-$('.flame').click(function () {
-  console.log('test');
-  animateConfetti();
-  $('.candle').hide();
-  $('.cherry').show();
-  $('.hbd').show()
-  $('.clue2').hide();
-  $('.cherry').addClass('fall');
-  $('.hbd').addClass('text-animation');
-});
