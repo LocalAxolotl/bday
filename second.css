@@ -109,7 +109,7 @@ body {
   z-index: 999;
 }
 
-.cherry {
+.cake-overlay .cherry {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -122,11 +122,11 @@ body {
   transform: translateX(-50px);
 }
 
-.cherry.fall {
+.cake-overlay .cherry.fall {
   animation: cherry-fall 0.75s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.cherry::after {
+.cake-overlay .cherry::after {
   content: '';
   top: -60%;
   left: 50%;
@@ -171,3 +171,4 @@ body {
     transform: translateY(0px);
   }
 }
+
