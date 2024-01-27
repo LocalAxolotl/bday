@@ -64,34 +64,36 @@ window.onload = function() {
     }
   }
 
-  const audioElement = document.getElementById('myAudio');
-document.getElementById('audio-button').addEventListener('click', function () {
-  // Play the audio
-  var audio = document.getElementById('myAudio');
-  audio.play();
-});
-document.getElementById('confetti-button').addEventListener('click', function () {
-  console.log('test');
-  animateConfetti();
-  document.querySelector('.candle').style.display = 'none';
-  document.querySelector('.cherry').style.display = 'block';
-  document.querySelector('.hbd').style.display = 'block';
-  document.querySelector('.clue2').style.display = 'none';
-  document.querySelector('.cherry').classList.add('fall');
-  document.querySelector('.hbd').classList.add('text-animation');
-    document.getElementById('confetti-button').style.display = 'none';
-  document.getElementById('audio-button').style.display = 'block';
-
-  // Change the text
-  document.getElementById('text').textContent = 'Press on the cherry';
-});
-  // Play the audio
+  function playAudio() {
+    const audioElement = document.getElementById('myAudio');
+    // Play the audio
     if (audioElement.paused) {
       audioElement.play();
     } else {
       audioElement.currentTime = 0;
     }
-}
+  }
+
+  document.getElementById('audio-button').addEventListener('click', function () {
+    playAudio();
+  });
+
+  document.getElementById('confetti-button').addEventListener('click', function () {
+    console.log('test');
+    animateConfetti();
+    document.querySelector('.candle').style.display = 'none';
+    document.querySelector('.cherry').style.display = 'block';
+    document.querySelector('.hbd').style.display = 'block';
+    document.querySelector('.clue2').style.display = 'none';
+    document.querySelector('.cherry').classList.add('fall');
+    document.querySelector('.hbd').classList.add('text-animation');
+    document.getElementById('confetti-button').style.display = 'none';
+    document.getElementById('audio-button').style.display = 'block';
+
+    // Change the text
+    document.getElementById('text').textContent = 'Press on the cherry';
+  });
+}"
 
 
 
