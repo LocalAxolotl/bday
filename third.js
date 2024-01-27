@@ -78,7 +78,9 @@ window.onload = function() {
     
     // Play the audio
     if (audioElement.paused) {
-      audioElement.play();
+      audioElement.play().catch(function(error) {
+        console.log('Failed to play audio:', error);
+      });
     } else {
       audioElement.currentTime = 0;
     }
