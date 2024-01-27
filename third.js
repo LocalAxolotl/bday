@@ -4,27 +4,21 @@ const confettiShower = [];
 const numConfettis = 300;
 const container = document.body;
 const colors = [
-  // your color array here
+  '#FABB24', //yellow
+  '#EF3971', //pink
+  '#C6DA2C', //green
+  '#EC6A63', //peach
+  //   '#ED1D24', //red
+  '#3495C2', //blue
+  '#EE798B', //pink-light
+  '#96D4DD', //tealish
+  '#F5F0A6', //sun
+  '#5CBB65', //green dark
+  '#F2ABE7', // icing pink
+  '#9FA3EC', // purple
+  '#86D2E1 ', // cyan
+  '#FEC31E ', // another yellow
 ];
-
-$('.flame').dblclick(function () {
-  console.log('test');
-  animateConfetti();
-
-  // Play sound
-  var flameSound = document.getElementById('flameSound');
-  flameSound.play();
-
-  // Hide candle and show cherry with text
-  $('.candle').hide();
-  $('.cherry').show();
-  $('.hbd').show();
-  $('.cherry').addClass('fall');
-  $('.hbd').addClass('text-animation');
-
-  // Show/hide additional text
-  $('.flame-text').text('Happy birthday mido').show();
-});
 
 function create() {
   w = Math.floor(Math.random() * 5 + 5);
@@ -68,4 +62,19 @@ function animateConfetti() {
     confettiShower.push(animated);
   }
 }
+$('.cake-overlay').click(function () {
+  $('body').css({ 'background-color': '#000' });
+  $('.clue2').addClass('text-animation');
+  $('.cake-overlay').hide();
+});
 
+$('.flame').dblclick(function () {
+  console.log('test');
+  animateConfetti();
+  $('.candle').hide();
+  $('.cherry').show();
+  $('.hbd').show()
+  $('.clue2').hide();
+  $('.cherry').addClass('fall');
+  $('.hbd').addClass('text-animation');
+});
