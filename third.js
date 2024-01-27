@@ -68,7 +68,7 @@ $('.cake-overlay').click(function () {
   $('.cake-overlay').hide();
 });
 
-$('.flame').dblclick(function () {
+$('.flame').click(function () {
   console.log('test');
   animateConfetti();
   $('.candle').hide();
