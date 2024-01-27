@@ -2,20 +2,6 @@
 body {
   background-color: black;
 }
-.confetti-button {
-  position: absolute;
-  top: 50%; /* adjust these values as needed */
-  left: 50%; /* adjust these values as needed */
-  transform: translate(-50%, -50%);
-}
-
-.clue {
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  font-family: 'Rubik', sans-serif;
-  border-right: 2px solid;
-  position: fixed;
 
   &.clue1 {
     top: 30px;
@@ -283,4 +269,19 @@ body {
     transform: translateY(0px);
   }
 }
+
+.confetti-button {
+  position: absolute;
+  top: 50%; /* adjust these values as needed */
+  left: 50%; /* adjust these values as needed */
+  transform: translate(-50%, -50%);
+}
+
+.clue {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+  border-right: 2px solid;
+  position: fixed;
 
