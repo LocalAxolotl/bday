@@ -65,11 +65,6 @@ window.onload = function() {
   }
 
   const audioElement = document.getElementById('myAudio');
-document.getElementById('audio-button').addEventListener('click', function () {
-  // Play the audio
-  var audio = document.getElementById('myAudio');
-  audio.play();
-});
 
   document.getElementById('confetti-button').addEventListener('click', function () {
     console.log('test');
@@ -89,6 +84,9 @@ document.getElementById('audio-button').addEventListener('click', function () {
     }
   });
 }
+
+
+
 
 
 
