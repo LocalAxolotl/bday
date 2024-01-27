@@ -3,64 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy breast day</title>
-    <script src="third.js"></script>
-    <link rel="stylesheet" href="second.css">
+    <title>Hapyy breast day</title>
+ <script src="third.js"></script>
+  <link rel="stylesheet" href="second.css">
 </head>
 <body>
-    <div class="cake">
-        <div class="cherry"></div>
-        <div class="candle">
-            <div class="flame"></div>
-            <div class="flame"></div>
-            <div class="flame"></div>
-            <div class="flam"></div>
-            <div class="flame"></div>
-        </div>
-        <div class="layer one"></div>
-        <div class="layer two"></div>
-        <div class="layer three"></div>
-    </div>
-    <button id="confetti-button" class="confetti-button" onclick="playAudio()">Click for confetti!</button>
-    <button id="audio-button">Play Audio</button>
+  <div class="cake">
+      <div class="cherry"></div>
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flam"></div>
+        <div class="flame"></div>
+      </div>
+      <div class="layer one"></div>
+      <div class="layer two"></div>
+      <div class="layer three"></div>
+    </div><button id="confetti-button" class="confetti-button" onclick="playAudio()">Click for confetti!</button>
+<button id="audio-button">Play Audio</button>
 
-    <audio id="myAudio">
-        <source src="hab.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    <p id="text">Press on the flame to blow it out</p>
+   <audio id="myAudio">
+            <source src="hab.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+<p id="text">Press on the flame to blow it out</p>
 
-    <script>
-        function playAudio() {
-            const audioElement = document.getElementById('myAudio');
-            // Play the audio
-            if (audioElement.paused) {
-                audioElement.play();
-            } else {
-                audioElement.currentTime = 0;
-            }
-        }
-
-        document.getElementById('audio-button').addEventListener('click', function () {
-            playAudio();
-        });
-
-        document.getElementById('confetti-button').addEventListener('click', function () {
-            console.log('test');
-            animateConfetti();
-            document.querySelector('.candle').style.display = 'none';
-            document.querySelector('.cherry').style.display = 'block';
-            document.querySelector('.hbd').style.display = 'block';
-            document.querySelector('.clue2').style.display = 'none';
-            document.querySelector('.cherry').classList.add('fall');
-            document.querySelector('.hbd').classList.add('text-animation');
-            document.getElementById('confetti-button').style.display = 'none';
-            document.getElementById('audio-button').style.display = 'block';
-
-            // Change the text
-            document.getElementById('text').textContent = 'Press on the cherry';
-        });
-    </script>
-</body>
+  </body>
 </html>
 
