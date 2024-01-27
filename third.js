@@ -65,6 +65,17 @@ function animateConfetti() {
 $('.flame').dblclick(function () {
   alert('Candle flame clicked!');
 });
+document.getElementById('confetti-button').addEventListener('click', function () {
+  console.log('test');
+  animateConfetti();
+  document.querySelector('.candle').style.display = 'none';
+  document.querySelector('.cherry').style.display = 'block';
+  document.querySelector('.hbd').style.display = 'block';
+  document.querySelector('.clue2').style.display = 'none';
+  document.querySelector('.cherry').classList.add('fall');
+  document.querySelector('.hbd').classList.add('text-animation');
+});
+
 document.querySelectorAll('.flame').forEach(flame => {
   flame.addEventListener('click', function () {
     console.log('test');
