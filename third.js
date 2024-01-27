@@ -79,6 +79,11 @@ document.getElementById('confetti-button').addEventListener('click', function ()
   document.querySelector('.clue2').style.display = 'none';
   document.querySelector('.cherry').classList.add('fall');
   document.querySelector('.hbd').classList.add('text-animation');
+    document.getElementById('confetti-button').style.display = 'none';
+  document.getElementById('audio-button').style.display = 'block';
+
+  // Change the text
+  document.getElementById('text').textContent = 'Press on the cherry';
 });
   // Play the audio
     if (audioElement.paused) {
