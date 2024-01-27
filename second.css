@@ -272,9 +272,10 @@ body {
 
 .confetti-button {
   position: absolute;
-  top: 40%; /* adjust this value as needed */
+  top: 38%; /* adjust this value as needed */
   left: 50%; /* adjust this value as needed */
   transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 
