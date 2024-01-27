@@ -290,7 +290,7 @@ body {
   #myAudio {
   position: absolute;
   top: 42%; /* adjust this value as needed */
-  left: 59%; /* adjust this value as needed */
+  left: 56.5%; /* adjust this value as needed */
   transform: translate(-50%, -50%);
   opacity:1%;
 }
