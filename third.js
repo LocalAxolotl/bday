@@ -1,6 +1,4 @@
 window.onload = function() {
-  // Double click the flames to see le magic
-
   const confettiShower = [];
   const numConfettis = 300;
   const container = document.body;
@@ -9,7 +7,6 @@ window.onload = function() {
     '#EF3971', //pink
     '#C6DA2C', //green
     '#EC6A63', //peach
-    //   '#ED1D24', //red
     '#3495C2', //blue
     '#EE798B', //pink-light
     '#96D4DD', //tealish
@@ -62,20 +59,8 @@ window.onload = function() {
       );
       confettiShower.push(animated);
     }
-  }
-
-      const audioElement = document.getElementById('myAudio');
-  document.getElementById('audio-button').addEventListener('click', function () {
-
-        var audio = document.getElementById('myAudio');
-    audio.play();
-        // Play the audio
-
-  });
-  document.getElementById('confetti-button').addEventListener('click', function () {
-    console.log('test');
-
-    animateConfetti();
+    
+    // Additional display changes here (if needed)
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
     document.querySelector('.hbd').style.display = 'block';
@@ -86,6 +71,17 @@ window.onload = function() {
     document.getElementById('audio-button').style.display = 'block';
     // Change the text
     document.getElementById('text').textContent = 'Press on the cherry';
+  }
+
+  const audioElement = document.getElementById('myAudio');
+  document.getElementById('audio-button').addEventListener('click', function () {
+    var audio = document.getElementById('myAudio');
+    audio.play();
+    // Play the audio
+  });
+
+  document.getElementById('confetti-button').addEventListener('click', function () {
+    animateConfetti();
   });
 }
 
