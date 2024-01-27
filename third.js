@@ -3,28 +3,19 @@ window.onload = function() {
   const numConfettis = 300;
   const container = document.body;
   const colors = [
-    '#FABB24', //yellow
-    '#EF3971', //pink
-    '#C6DA2C', //green
-    '#EC6A63', //peach
-    '#3495C2', //blue
-    '#EE798B', //pink-light
-    '#96D4DD', //tealish
-    '#F5F0A6', //sun
-    '#5CBB65', //green dark
-    '#F2ABE7', // icing pink
-    '#9FA3EC', // purple
-    '#86D2E1 ', // cyan
-    '#FEC31E ', // another yellow
+    '#FABB24', '#EF3971', '#C6DA2C', '#EC6A63', '#3495C2',
+    '#EE798B', '#96D4DD', '#F5F0A6', '#5CBB65', '#F2ABE7',
+    '#9FA3EC', '#86D2E1 ', '#FEC31E '
   ];
 
   function create() {
-    w = Math.floor(Math.random() * 5 + 5);
-    h = w;
-    x = Math.floor(Math.random() * 100);
-    y = Math.floor(Math.random() * 100);
-    c = colors[Math.floor(Math.random() * colors.length)];
-    var newConfetti =
+    const w = Math.floor(Math.random() * 5 + 5);
+    const h = w;
+    const x = Math.floor(Math.random() * 100);
+    const y = Math.floor(Math.random() * 100);
+    const c = colors[Math.floor(Math.random() * colors.length)];
+
+    const newConfetti =
       '<div class="confetti" style="bottom:' +
       y +
       '%; left:' +
@@ -36,17 +27,19 @@ window.onload = function() {
       'px;"><div class="rotate"><div class="askew" style="background-color:' +
       c +
       '"></div></div></div>';
+
     container.innerHTML += newConfetti;
   }
 
   function animateConfetti() {
-    for (var i = 1; i <= numConfettis; i++) {
+    for (let i = 1; i <= numConfettis; i++) {
       create();
     }
-    var confettis = document.querySelectorAll('.confetti');
-    for (var i = 0; i < confettis.length; i++) {
-      var opacity = Math.random() + 0.2;
-      var animated = confettis[i].animate(
+
+    const confettis = document.querySelectorAll('.confetti');
+    for (let i = 0; i < confettis.length; i++) {
+      const opacity = Math.random() + 0.2;
+      const animated = confettis[i].animate(
         [
           { transform: 'translate3d(0,0,0)', opacity: opacity },
           { transform: 'translate3d(10vw,100vh,1vw)', opacity: 1 },
@@ -59,7 +52,12 @@ window.onload = function() {
       );
       confettiShower.push(animated);
     }
-    
+  }
+
+  const audioElement = document.getElementById('myAudio');
+  audioElement.addEventListener('ended', function () {
+    // Audio has ended, now trigger the confetti animation
+    animateConfetti();
     // Additional display changes here (if needed)
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
@@ -71,21 +69,17 @@ window.onload = function() {
     document.getElementById('audio-button').style.display = 'block';
     // Change the text
     document.getElementById('text').textContent = 'Press on the cherry';
-  }
+  });
 
-  const audioElement = document.getElementById('myAudio');
   document.getElementById('audio-button').addEventListener('click', function () {
-    var audio = document.getElementById('myAudio');
-    audio.play();
-    // Play the audio
+    audioElement.play();
   });
 
   document.getElementById('confetti-button').addEventListener('click', function () {
-    animateConfetti();
+    audioElement.pause();  // Pause the audio if it's playing
+    audioElement.currentTime = 0;  // Reset the audio to the beginning
   });
 }
-
-
 
 
 
