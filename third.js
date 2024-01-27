@@ -65,7 +65,11 @@ window.onload = function() {
   }
 
   const audioElement = document.getElementById('myAudio');
-
+document.getElementById('audio-button').addEventListener('click', function () {
+  // Play the audio
+  var audio = document.getElementById('myAudio');
+  audio.play();
+});
   document.getElementById('confetti-button').addEventListener('click', function () {
     console.log('test');
     animateConfetti();
@@ -76,12 +80,6 @@ window.onload = function() {
     document.querySelector('.cherry').classList.add('fall');
     document.querySelector('.hbd').classList.add('text-animation');
     
-    // Hide the confetti button and show the audio button
-    document.getElementById('confetti-button').style.display = 'none';
-    document.getElementById('audio-button').style.display = 'block';
-  });
-
-  document.getElementById('audio-button').addEventListener('click', function () {
     // Play the audio
     if (audioElement.paused) {
       audioElement.play();
@@ -90,6 +88,13 @@ window.onload = function() {
     }
   });
 }
+
+
+
+
+
+
+
 
 
 
