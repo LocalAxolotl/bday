@@ -78,14 +78,13 @@ window.onload = function() {
     
     // Play the audio
     if (audioElement.paused) {
-      audioElement.play().catch(function(error) {
-        console.log('Failed to play audio:', error);
-      });
+      audioElement.play();
     } else {
       audioElement.currentTime = 0;
     }
   });
 }
+
 
 
 
