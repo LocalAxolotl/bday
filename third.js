@@ -69,11 +69,12 @@ window.onload = function() {
   const audioElement = document.getElementById('myAudio');
   document.getElementById('audio-button').addEventListener('click', function () {
     // Play the audio
-    var audio = document.getElementById('myAudio');
-    audio.play();
+
   });
   document.getElementById('confetti-button').addEventListener('click', function () {
     console.log('test');
+        var audio = document.getElementById('myAudio');
+    audio.play();
     animateConfetti();
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
