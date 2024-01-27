@@ -66,6 +66,7 @@ window.onload = function() {
 
   document.getElementById('confetti-button').addEventListener('click', function () {
     console.log('test');
+       document.getElementById('myAudio').play();
     animateConfetti();
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
@@ -73,7 +74,7 @@ window.onload = function() {
     document.querySelector('.clue2').style.display = 'none';
     document.querySelector('.cherry').classList.add('fall');
     document.querySelector('.hbd').classList.add('text-animation');
-     document.getElementById('myAudio').play();
+  
   });
 }
 
