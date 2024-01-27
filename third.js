@@ -19,6 +19,28 @@ const colors = [
   '#86D2E1 ', // cyan
   '#FEC31E ', // another yellow
 ];
+// Your existing JavaScript code here
+
+$('.flame').dblclick(function () {
+  console.log('test');
+  animateConfetti();
+
+  // Play sound
+  var flameSound = document.getElementById('flameSound');
+  flameSound.play();
+
+  // Show text
+  $('.candle').hide();
+  $('.cherry').show();
+  $('.hbd').show();
+  $('.clue2').hide();
+  $('.cherry').addClass('fall');
+  $('.hbd').addClass('text-animation');
+
+  // Show/hide additional text
+  $('.flame-text').text('Happy birthday mido').show();
+});
+
 
 function create() {
   w = Math.floor(Math.random() * 5 + 5);
