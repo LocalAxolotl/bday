@@ -55,32 +55,30 @@ window.onload = function() {
   }
 
   const audioElement = document.getElementById('myAudio');
-  audioElement.addEventListener('canplaythrough', function () {
-    // Audio is ready to play
-    document.getElementById('confetti-button').addEventListener('click', function () {
-      audioElement.pause();  // Pause the audio if it's playing
-      audioElement.currentTime = 0;  // Reset the audio to the beginning
-      animateConfetti();
-      // Additional display changes here (if needed)
-      document.querySelector('.candle').style.display = 'none';
-      document.querySelector('.cherry').style.display = 'block';
-      document.querySelector('.hbd').style.display = 'block';
-      document.querySelector('.clue2').style.display = 'none';
-      document.querySelector('.cherry').classList.add('fall');
-      document.querySelector('.hbd').classList.add('text-animation');
-      document.getElementById('confetti-button').style.display = 'none';
-      document.getElementById('audio-button').style.display = 'block';
-      // Change the text
-      document.getElementById('text').textContent = 'Press on the cherry';
-    });
+
+  document.getElementById('confetti-button').addEventListener('click', function () {
+    animateConfetti();
+    // Additional display changes here (if needed)
+    document.querySelector('.candle').style.display = 'none';
+    document.querySelector('.cherry').style.display = 'block';
+    document.querySelector('.hbd').style.display = 'block';
+    document.querySelector('.clue2').style.display = 'none';
+    document.querySelector('.cherry').classList.add('fall');
+    document.querySelector('.hbd').classList.add('text-animation');
+    document.getElementById('confetti-button').style.display = 'none';
+    document.getElementById('audio-button').style.display = 'block';
+    // Change the text
+    document.getElementById('text').textContent = 'Press on the cherry';
   });
 
   document.getElementById('audio-button').addEventListener('click', function () {
-    audioElement.play();
+    if (audioElement.paused) {
+      audioElement.play();
+    } else {
+      audioElement.pause();
+    }
   });
 }
-
-
 
 
 
