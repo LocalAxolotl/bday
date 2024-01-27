@@ -272,10 +272,11 @@ body {
 
 .confetti-button {
   position: absolute;
-  top: 50%; /* adjust these values as needed */
-  left: 50%; /* adjust these values as needed */
+  top: 45%; /* adjust this value as needed */
+  left: 50%; /* adjust this value as needed */
   transform: translate(-50%, -50%);
 }
+
 
 .clue {
   text-align: center;
