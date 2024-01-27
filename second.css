@@ -289,10 +289,11 @@ body {
 }
   #audio-button {
   position: absolute;
-  top: 38%; /* adjust this value as needed */
+  top: 42%; /* adjust this value as needed */
   left: 50%; /* adjust this value as needed */
   transform: translate(-50%, -50%);
     display: block;
+    opacity: 0;
   
 }
 
