@@ -55,9 +55,13 @@ window.onload = function() {
   }
 
   const audioElement = document.getElementById('myAudio');
+    function changeText() {
+        document.getElementById('text').textContent = 'Now press the cherry';
+    }
 
   document.getElementById('confetti-button').addEventListener('click', function () {
     animateConfetti();
+      changeText(); // Call the function to change the text
     // Additional display changes here (if needed)
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
@@ -69,6 +73,7 @@ window.onload = function() {
     document.getElementById('audio-button').style.display = 'block';
     // Change the text
     document.getElementById('text').textContent = 'Press on the cherry';
+    
   });
 
   document.getElementById('audio-button').addEventListener('click', function () {
