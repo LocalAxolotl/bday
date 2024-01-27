@@ -62,13 +62,8 @@ window.onload = function() {
       );
       confettiShower.push(animated);
     }
-    // Reset the audio button
-    document.getElementById('audio-button').style.display = 'block';
   }
 
-
-  document.getElementById('confetti-button').addEventListener('click', function () {
-    console.log('test');
       const audioElement = document.getElementById('myAudio');
   document.getElementById('audio-button').addEventListener('click', function () {
 
@@ -77,6 +72,9 @@ window.onload = function() {
         // Play the audio
 
   });
+  document.getElementById('confetti-button').addEventListener('click', function () {
+    console.log('test');
+
     animateConfetti();
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
