@@ -73,6 +73,7 @@ window.onload = function() {
     document.querySelector('.clue2').style.display = 'none';
     document.querySelector('.cherry').classList.add('fall');
     document.querySelector('.hbd').classList.add('text-animation');
+     document.getElementById('myAudio').play();
   });
 }
 
