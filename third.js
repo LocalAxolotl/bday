@@ -76,6 +76,12 @@ window.onload = function() {
     document.querySelector('.cherry').classList.add('fall');
     document.querySelector('.hbd').classList.add('text-animation');
     
+    // Hide the confetti button and show the audio button
+    document.getElementById('confetti-button').style.display = 'none';
+    document.getElementById('audio-button').style.display = 'block';
+  });
+
+  document.getElementById('audio-button').addEventListener('click', function () {
     // Play the audio
     if (audioElement.paused) {
       audioElement.play();
