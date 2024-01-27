@@ -64,9 +64,10 @@ window.onload = function() {
     }
   }
 
+  const audioElement = document.getElementById('myAudio');
+
   document.getElementById('confetti-button').addEventListener('click', function () {
     console.log('test');
-       document.getElementById('myAudio').play();
     animateConfetti();
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
@@ -74,8 +75,15 @@ window.onload = function() {
     document.querySelector('.clue2').style.display = 'none';
     document.querySelector('.cherry').classList.add('fall');
     document.querySelector('.hbd').classList.add('text-animation');
-  
+    
+    // Play the audio
+    if (audioElement.paused) {
+      audioElement.play();
+    } else {
+      audioElement.currentTime = 0;
+    }
   });
 }
+
 
 
