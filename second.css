@@ -292,6 +292,6 @@ body {
   top: 38%; /* adjust this value as needed */
   left: 50%; /* adjust this value as needed */
   transform: translate(-50%, -50%);
-  display: none; /* initially hide the button */
+  
 }
 
