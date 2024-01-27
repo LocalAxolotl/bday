@@ -62,7 +62,9 @@ function animateConfetti() {
     confettiShower.push(animated);
   }
 }
-
+$('.flame').dblclick(function () {
+  alert('Candle flame clicked!');
+});
 document.querySelectorAll('.flame').forEach(flame => {
   flame.addEventListener('click', function () {
     console.log('test');
