@@ -2,6 +2,13 @@
 body {
   background-color: black;
 }
+.confetti-button {
+  position: absolute;
+  top: 50%; /* adjust these values as needed */
+  left: 50%; /* adjust these values as needed */
+  transform: translate(-50%, -50%);
+}
+
 .clue {
   text-align: center;
   white-space: nowrap;
