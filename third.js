@@ -79,10 +79,6 @@ document.getElementById('confetti-button').addEventListener('click', function ()
   document.querySelector('.clue2').style.display = 'none';
   document.querySelector('.cherry').classList.add('fall');
   document.querySelector('.hbd').classList.add('text-animation');
-  
-  // Hide the confetti button and show the audio button
-  document.getElementById('confetti-button').style.display = 'none';
-  document.getElementById('audio-button').style.display = 'block';
 });
   // Play the audio
     if (audioElement.paused) {
@@ -90,16 +86,6 @@ document.getElementById('confetti-button').addEventListener('click', function ()
     } else {
       audioElement.currentTime = 0;
     }
-  document.getElementById('confetti-button').addEventListener('click', function () {
-    console.log('test');
-    animateConfetti();
-    document.querySelector('.candle').style.display = 'none';
-    document.querySelector('.cherry').style.display = 'block';
-    document.querySelector('.hbd').style.display = 'block';
-    document.querySelector('.clue2').style.display = 'none';
-    document.querySelector('.cherry').classList.add('fall');
-    document.querySelector('.hbd').classList.add('text-animation');
-  });
 }
 
 
