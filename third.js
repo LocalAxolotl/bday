@@ -66,15 +66,17 @@ window.onload = function() {
     document.getElementById('audio-button').style.display = 'block';
   }
 
-  const audioElement = document.getElementById('myAudio');
-  document.getElementById('audio-button').addEventListener('click', function () {
-    // Play the audio
 
-  });
   document.getElementById('confetti-button').addEventListener('click', function () {
     console.log('test');
+      const audioElement = document.getElementById('myAudio');
+  document.getElementById('audio-button').addEventListener('click', function () {
+
         var audio = document.getElementById('myAudio');
     audio.play();
+        // Play the audio
+
+  });
     animateConfetti();
     document.querySelector('.candle').style.display = 'none';
     document.querySelector('.cherry').style.display = 'block';
