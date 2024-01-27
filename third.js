@@ -83,12 +83,6 @@ window.onload = function() {
     document.querySelector('.hbd').classList.add('text-animation');
     document.getElementById('confetti-button').style.display = 'none';
     document.getElementById('audio-button').style.display = 'block';
-    // Play the audio
-    if (audioElement.paused) {
-      audioElement.play();
-    } else {
-      audioElement.currentTime = 0;
-    }
     // Change the text
     document.getElementById('text').textContent = 'Press on the cherry';
   });
